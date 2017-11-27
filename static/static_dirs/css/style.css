@@ -1,0 +1,251 @@
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: ;
+}
+
+.image-slider{
+	background-image: url("img/background-image.jpg");
+
+  /* Full height */
+  height: 100%;
+  opacity: 0.7;
+  top:0;
+  margin-top: -56px;
+  position: relative;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.layer {
+    background-color: rgba(5,5, 5, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.my-navbar{
+  background-color: transparent !important;
+  z-index: 1000;
+}
+.navbar-nav >li >a{
+	margin-right: 10px;
+}
+.navbar-right{
+  position: absolute;
+  right: 70px;
+}
+
+
+a.nav-link{
+  color: #ffffff !important;
+}
+a.nav-link:hover{
+  border-bottom: 2px solid #ffffff;
+}
+ul.button{
+  color: #ffffff;
+}
+.my-form{
+  position: absolute;
+  left: 28.5%;
+  top:45%;
+}
+.btn-text{
+  display: inline-block;
+  margin-top: 5px;
+}
+.my-input{
+  width: 450px !important ;
+  height: 50px;
+}
+.my-btn{
+  height: 50px;
+  color: #ffffff;
+  background-color: #005A9C;
+  border: 1px solid #005A9C !important;
+}
+.btn-signin, .btn-signup{
+  width: 100% !important;
+  height: 40px;
+}
+.my-btn-login{
+  height: 42px;
+  color: #ffffff;
+  background-color: #005A9C;
+  border: 1px solid #005A9C !important;
+}
+button.my-btn:hover{
+  background-color: #116BAD !important;
+}
+button.my-btn-login:hover{
+  background-color: #116BAD !important;
+}
+.footer{
+  background: #333333;
+  color: #eeeeee;
+  height: 100px;
+}
+.main-footer{
+  text-align: center;
+  padding-top: 20px;
+}
+.main-footer>a{
+  color: #ffffff;
+}
+.social-footer{
+  text-align: right;
+  margin-right: 10px;
+}
+.social-footer>a{
+  color: #ffffff;
+}
+
+.input-box{
+  display: none;
+  position: absolute;
+  border-radius: 2px 2px 2px 2px;
+  margin-top: 57px;
+  background-color: #ffffff;
+  width: 540px;
+}
+.input-box>a{
+  text-decoration: none;
+  font-size: 1em;
+  color: #111111;
+  margin-bottom: 0px;
+  padding: 2px 0px 5px 10px;
+  display: block;
+  position: relative;
+}
+.input-box>a:hover{
+  background: #116BAD;
+  color: #ffffff;
+}
+
+
+.nav-tabs>li{
+  margin: 0px 0px 0px 0px;
+  height: 30px;
+}
+
+.nav-tabs>li:hover{
+  border-bottom: 1px solid #116BAD;
+}
+.nav-tabs>li>a{
+  text-decoration: none;
+  color: #005A9C;
+}
+.nav-tabs > li{
+    display:inline-block !important;
+    padding-left: 10px;
+}
+.nav-tabs>li.active{
+  margin-left: 33%;
+  padding-right: 10px;
+  border-right: 1px solid #116BAD;
+}
+.nav-tabs {
+    text-align:center !important;
+    align-content: center;
+}
+
+
+
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  text-align: center;
+  color: #FFF;
+  margin: 0 auto !important;
+  display: block;
+  width: 100%;
+}
+.or-login{
+  text-align: center;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+
+/* Facebook */
+.loginBtn--facebook {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+}
+.loginBtn--facebook:before {
+  border-right: #364e92 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .my-navbar{
+    background-color: transparent !important;
+  }
+  .navbar-right{
+    position: absolute;
+    left: 20px;
+    border-bottom: 1px solid #eeeeee;
+  }
+  .my-form{
+    position: absolute;
+    left:30%;
+  }
+  .my-btn{
+    height: 40px;
+    width: 40px;
+  }
+  .btn-text{
+      display: none;
+  }
+  .my-input{
+    width: 200px !important ;
+    height: 40px;
+  }
+  .input-box{
+    margin-top: 50px;
+    background-color: #ffffff;
+    width: 239px;
+  }
+}
