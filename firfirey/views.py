@@ -9,3 +9,6 @@ def home(request):
 
 def profile(request):
     return render(request, 'profile.html',{})
+
+def results(request):
+    return render(request, 'results.html',{})
