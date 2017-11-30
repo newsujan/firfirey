@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html>
@@ -5,10 +7,21 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+{% block content %}
+<style>
+  .search-box{
+    background-color: #eeeeee;
+    height: 200px;
+  }
+</style>
+
   <body>
 
-<div class="container">
 
-</div>
+  <div class="search-box">
+
+  </div>
+
+{% endblock content %}
   </body>
 </html>
