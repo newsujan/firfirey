@@ -1,27 +1,167 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
+{% block content %}
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Profile</title>
   </head>
-{% block content %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
   .search-box{
     background-color: #eeeeee;
-    height: 200px;
+    height: 150px;
   }
+  .my-form{
+    top:20%;
+  }
+  .mb20 { margin-bottom: 20px; }
+
+hgroup { padding-left: 15px; border-bottom: 1px solid #ccc; }
+hgroup h1 { font: 500 normal 1.625em "Roboto",Arial,Verdana,sans-serif; color: #2a3644; margin-top: 0; line-height: 1.15; }
+hgroup h2.lead { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; color: #2a3644; margin: 0; padding-bottom: 10px; }
+
+.search-result .thumbnail { border-radius: 0 !important; }
+.search-result:first-child { margin-top: 0 !important; }
+.search-result { margin-top: 20px; margin-bottom: 30px;}
+.search-result .col-md-2 { border-right: 1px dotted #ccc; min-height: 140px; }
+.search-result ul { padding-left: 0 !important; list-style: none;  }
+.search-result ul li { font: 400 normal .85em "Roboto",Arial,Verdana,sans-serif;  line-height: 30px; }
+.search-result ul li i { padding-right: 5px; }
+.search-result .col-md-7 { position: relative; }
+.search-result h3 { font: 500 normal 1.375em "Roboto",Arial,Verdana,sans-serif; margin-top: 0 !important; margin-bottom: 10px !important; }
+.search-result h3 > a, .search-result i { color: #248dc1 !important; }
+.search-result p { font: normal normal 1em "Roboto",Arial,Verdana,sans-serif; }
+.search-result span.plus { position: absolute; right: 0; top: 126px; }
+.search-result span.plus a { background-color: #248dc1; padding: 5px 5px 3px 5px; }
+.search-result span.plus a:hover { background-color: #414141; }
+.search-result span.plus a i { color: #fff !important; }
+.search-result span.border { display: block; width: 97%; margin: 0 15px; border-bottom: 1px dotted #ccc; }
 </style>
 
   <body>
 
 
   <div class="search-box">
+    {% block search %}
+    <div class="container">
+    		<form class="form-inline my-form">
+    			<input class="form-control my-input" id="myinputid" onfocusout="myfocusoutinput()"
+    			onclick="myclickinput()" type="search" placeholder="Hospital/Doctor">
+    			<div class="input-box">
+    					<a class="input-text" onclick="category" href="results.html">Gynecologist</a>
+    					<a class="input-text" onclick="category" href="">Peadiatrician</a>
+    					<a class="input-text" onclick="category" href="">Cardiology</a>
+    					<a class="input-text" onclick="category" href="">Orthopedician</a>
+    					<a class="input-text" onclick="category" href="">Otorhinolaryngology</a>
 
+    			</div>
+    			<div class="input-group-btn">
+    			<button class="btn my-btn btn-outline-success" type="submit">
+    				<p class="btn-text">Search</p>
+    				<i class="fa fa-search" aria-hidden="true"></i>
+    			</button>
+    		</div>
+    		</form>
+    </div>
+    {% endblock search %}
   </div>
 
-{% endblock content %}
+  <div class="container">
+
+    <hgroup class="mb20">
+		<h1 style="margin-top:10px">Search Results</h1>
+		<h2 class="lead"><strong class="text-danger">3</strong> results were found for the search for <strong class="text-danger">Hospital</strong></h2>
+	</hgroup>
+
+    <section class="col-xs-12 col-sm-6 col-md-12">
+		<article class="search-result row">
+			<div class="col-xs-12 col-sm-12 col-md-3">
+				<a href="/profile/" title="Lorem ipsum" class="thumbnail"><img width="250" height="140" src="http://cdn2.momjunction.com/wp-content/uploads/2015/03/Choose-The-Right-Gynecologist.jpg" alt="Lorem ipsum" /></a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-2">
+				<ul class="meta-search">
+					<li><i class="glyphicon glyphicon-calendar"></i> <span>02/15/2014</span></li>
+					<li><i class="glyphicon glyphicon-time"></i> <span>4:28 pm</span></li>
+					<li><i class="glyphicon glyphicon-tags"></i> <span>People</span></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+				<h3><a href="#" title="">Gynecologist</a></h3>
+				<p>Going to see a gynecologist — a doctor who focuses on women’s reproductive health —
+          means you’re taking responsibility for your body in new ways.
+          It can be very exciting to know you’re making sure all is going well with puberty,
+          your reproductive system, and more.
+          <span class="plus"><a href="#" title="Lorem ipsum"><i class="fa fa-plus"></i></a></span>
+        </p>
+			</div>
+			<span class="clearfix borda"></span>
+		</article>
+
+        <article class="search-result row">
+			<div class="col-xs-12 col-sm-12 col-md-3">
+				<a href="#" title="Lorem ipsum" class="thumbnail"><img width="250" height="140" src="http://cdn.lankainformation.lk/media/com_mtree/images/listings/m/33175.jpg" alt="Lorem ipsum" /></a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-2">
+				<ul class="meta-search">
+					<li><i class="glyphicon glyphicon-calendar"></i> <span>02/13/2014</span></li>
+					<li><i class="glyphicon glyphicon-time"></i> <span>8:32 pm</span></li>
+					<li><i class="glyphicon glyphicon-tags"></i> <span>Food</span></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-7">
+				<h3><a href="#" title="">Peadiatrician</a></h3>
+				<p>A medical doctor who specializes in this area is known as a pediatrician,
+          or paediatrician. The word pediatrics and its cognates mean "healer of children";
+          they derive from two Greek words: παῖς (pais "child") and ἰατρός (iatros "doctor, healer").
+          <span class="plus"><a href="#" title="Lorem ipsum"><i class="fa fa-plus"></i></a></span>
+        </p>
+
+			</div>
+			<span class="clearfix borda"></span>
+		</article>
+
+		<article class="search-result row">
+			<div class="col-xs-12 col-sm-12 col-md-3">
+				<a href="#" title="Lorem ipsum" class="thumbnail"><img width="250" height="140" src="https://cloudfront.ualberta.ca/-/media/medicine/departments/medicine/divisions/cardiology/cardimage.jpg?w=1200" alt="Lorem ipsum" /></a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-2">
+				<ul class="meta-search">
+					<li><i class="glyphicon glyphicon-calendar"></i> <span>01/11/2014</span></li>
+					<li><i class="glyphicon glyphicon-time"></i> <span>10:13 am</span></li>
+					<li><i class="glyphicon glyphicon-tags"></i> <span>Sport</span></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-7">
+				<h3><a href="#" title="">Cardiology</a></h3>
+				<p>he field includes medical diagnosis and treatment of congenital heart defects,
+          coronary artery disease, heart failure, valvular heart disease and electrophysiology.
+          Physicians who specialize in this field of medicine are called cardiologists,
+          a specialty of internal medicine.
+          <span class="plus"><a href="#" title="Lorem ipsum"><i class="fa fa-plus"></i></a></span>
+        </p>
+
+			</div>
+			<span class="clearfix border"></span>
+		</article>
+
+	</section>
+</div>
+
   </body>
+
+  <script src="{% static 'js/app.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+{% endblock content %}
 </html>
