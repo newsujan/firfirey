@@ -10,14 +10,6 @@
 
 
 
-<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
-<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
 <style >
 	.input-box{
@@ -27,12 +19,27 @@
 	.search-category{
 		position: absolute;
 		z-index: 100;
-		margin-top: 45px;
+		margin-top: 50px;
 		margin-left: 70px;
 	}
 	.search-category>a{
 		color: #ffffff;
 		margin-right: 20px;
+	}
+	.my-navbar{
+		background: transparent !important;
+	}
+	@media (max-width: 768px) {
+		.my-form{
+			margin-top: -7%;
+			margin-left: -7% !important;
+		}
+		.search-category{
+			margin-left: 30px;
+		}
+		.input-box{
+			margin-top: 97px !important;
+		}
 	}
 </style>
 <body>
@@ -50,7 +57,7 @@
 			<input class="form-control my-input" id="myinputid" onfocusout="myfocusoutinput()"
 			onclick="myclickinput()" type="search" placeholder="Hospital/Doctor">
 			<div class="search-category">
-				<a href="#"><span class="fa fa-hospital-o"></span> Hospital</a>
+				<a href="/results/"><span class="fa fa-hospital-o"></span> Hospital</a>
 				<a href="#"><span class="fa fa-stethoscope"></span> Doctors</a>
 				<a href="#"><span class="fa fa-plus-square"></span> Clinic</a>
 				<a href="#"><span class="fa fa-ambulance"></span> Ambulance</a>
@@ -62,6 +69,7 @@
 					<a class="input-text" onclick="category" href="">Cardiology</a>
 					<a class="input-text" onclick="category" href="">Orthopedician</a>
 					<a class="input-text" onclick="category" href="">Otorhinolaryngology</a>
+
 
 			</div>
 			<div class="input-group-btn">
@@ -77,16 +85,6 @@
 
 </body>
 
-
-<script src="{% static 'js/app.js' %}"></script>
-<script src="{% static 'js/bootstrap.js' %}"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
 {% endblock content %}
 

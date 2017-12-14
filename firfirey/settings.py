@@ -25,7 +25,7 @@ SECRET_KEY = '+io0nn)5-jt0va1@rue%1^p)!)(aio2&f1x_k703&72ysidwbv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -66,7 +66,7 @@ TEMPLATES = [
         },
     },
 ]
-  
+
 
 WSGI_APPLICATION = 'firfirey.wsgi.application'
 

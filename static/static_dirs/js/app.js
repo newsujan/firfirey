@@ -10,7 +10,3 @@ function myfocusoutinput() {
 function loginfunction(){
   $(".tab-login").click()
 }
-
-function category(){
-  window.open("results.html");
-}

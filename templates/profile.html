@@ -13,12 +13,20 @@
   <style media="screen">
     .profile-box{
       background: #eeeeee;
+      padding-bottom: 10px;
     }
-    img {
+    .image-circle {
     border-radius: 50%;
+    }
+    .image-fillet{
+      border-radius:10%;
     }
     .checked{
       color: red;
+    }
+    .review-box{
+      height: 100px;
+      margin-top: 20px;
     }
   </style>
   <body>
@@ -28,7 +36,7 @@
     <div class="container" >
       <div class="col-md-12">
         <div class="col-md-4 pull-right image-circle" style="margin-top:10px;">
-          <a href="/profile/" title="Lorem ipsum" class="thumbnail"><img width="250" height="250" src="http://cdn2.momjunction.com/wp-content/uploads/2015/03/Choose-The-Right-Gynecologist.jpg" alt="Lorem ipsum" /></a>
+          <a href="/profile/" title="Lorem ipsum" class="thumbnail"><img class="image-circle" width="250" height="250" src="http://cdn2.momjunction.com/wp-content/uploads/2015/03/Choose-The-Right-Gynecologist.jpg" alt="Lorem ipsum" /></a>
         </div>
         <div class="col-md-8">
           <h1 class="profile-heading">Gynecologist</h1>
@@ -41,11 +49,31 @@
           <div class="list-profile"><span class="fa fa-circle"></span> Available</div>
           <div class="list-profile"><span class="fa fa-location-arrow"></span> Norvic Hospital </div>
           <div class="list-profile"><span class="fa fa-home"></span> Lalitpur</div>
-          <p>Going to see a gynecologist — a doctor who focuses on women’s reproductive health —
+          <div class="list-profile"><span class="fa fa-user-circle"></span> About<br>
+            Going to see a gynecologist — a doctor who focuses on women’s reproductive health —
             means you’re taking responsibility for your body in new ways.
             It can be very exciting to know you’re making sure all is going well with puberty,
             your reproductive system, and more.
-          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="col-md-12">
+      <div class="col-md-">
+        <div class="review-box">
+          <a href="/profile/" class="thumbnail"><img class="image-fillet" width="70" height="70" src="http://cdn2.momjunction.com/wp-content/uploads/2015/03/Choose-The-Right-Gynecologist.jpg" alt="Lorem ipsum" /></a>
+        </div>
+        <div class="col-md-2" style="position:relative;">
+          sndkiansdkjasndo
+        </div>
+        <div class="col-md-8">
+          Going to see a gynecologist — a doctor who focuses on women’s reproductive health —
+          means you’re taking responsibility for your body in new ways.
+          It can be very exciting to know you’re making sure all is going well with puberty,
+          your reproductive system, and more.
         </div>
       </div>
     </div>

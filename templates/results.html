@@ -12,12 +12,35 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
+  .input-box{
+    margin-top: 97px !important;
+    z-index: 1000;
+  }
   .search-box{
     background-color: #eeeeee;
-    height: 150px;
+    height: 170px;
   }
   .my-form{
     top:20%;
+  }
+  .search-category{
+		position: absolute;
+		z-index: 100;
+		margin-top: 50px;
+		margin-left: 70px;
+	}
+	.search-category>a{
+		color: #1281b7;
+		margin-right: 20px;
+	}
+  @media (max-width: 768px) {
+		.my-form{
+			margin-top: -7%;
+			margin-left: -7% !important;
+		}
+    .search-category{
+			margin-left: 30px;
+		}
   }
   .mb20 { margin-bottom: 20px; }
 
@@ -52,6 +75,13 @@ hgroup h2.lead { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; 
     		<form class="form-inline my-form">
     			<input class="form-control my-input" id="myinputid" onfocusout="myfocusoutinput()"
     			onclick="myclickinput()" type="search" placeholder="Hospital/Doctor">
+          <div class="search-category">
+    				<a href="#"><span class="fa fa-hospital-o"></span> Hospital</a>
+    				<a href="#"><span class="fa fa-stethoscope"></span> Doctors</a>
+    				<a href="#"><span class="fa fa-plus-square"></span> Clinic</a>
+    				<a href="#"><span class="fa fa-ambulance"></span> Ambulance</a>
+
+    			</div>
     			<div class="input-box">
     					<a class="input-text" onclick="category" href="results.html">Gynecologist</a>
     					<a class="input-text" onclick="category" href="">Peadiatrician</a>
