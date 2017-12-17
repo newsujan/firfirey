@@ -138,9 +138,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static_root')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 
 MEDIA_URL = '/Media/'
-<<<<<<< 04d0cbf05055617e4749997d0460d3950de2e09b
-=======
 
 
 SITE_ID = 1
->>>>>>> social login updated
+
