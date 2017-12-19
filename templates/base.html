@@ -1,4 +1,6 @@
 
+{% load socialaccount %}
+{% providers_media_js %}
 {% load staticfiles %}
 
 
@@ -87,7 +89,8 @@
 				<div class="tab-content">
 			    <div id="home" class="tab-pane fade in active">
 						<button class="loginBtn loginBtn--facebook">
-						  Login with Facebook
+						  <a href="{% provider_login_url "facebook" method="js_sdk" %}" >
+  							Sign in with Facebook </a>
 						</button>
 						<div class="or-login">or</div>
 						<form class="form-horizontal">
